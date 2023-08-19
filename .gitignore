@@ -1,0 +1,53 @@
+# Ignore Python bytecode files
+__pycache__/
+
+# Ignore environment-related files
+.env
+.env.*
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Ignore virtual environment directories (if you're using venv)
+venv/
+ENV/
+
+# Ignore log files
+*.log
+
+# Ignore SQLite database files (if you're using SQLite)
+*.db
+
+# Ignore generated files
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.csv
+
+# Ignore editor/IDE files
+.vscode/
+.idea/
+
+# Ignore Docker files (if you're using Docker)
+Dockerfile
+docker-compose.yml
+
+# Ignore local development configurations
+config.py
+
+# Ignore dependencies (if using pipenv)
+Pipfile.lock
+
+# Ignore miscellaneous temporary files and directories
+*.swp
+*.swo
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Ignore sensitive files containing secrets
+secrets.json
+secrets.yaml
