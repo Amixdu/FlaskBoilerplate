@@ -35,8 +35,6 @@ ENV/
 Dockerfile
 docker-compose.yml
 
-# Ignore local development configurations
-config.py
 
 # Ignore dependencies (if using pipenv)
 Pipfile.lock

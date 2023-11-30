@@ -1,14 +1,19 @@
 from firebase_admin import firestore
-import uuid
 
 db = firestore.client()
-user_ref = db.collection('user')
+collection_ref = db.collection("users")
+
 
 def create_user(body):
-    try:
-      id = body.pop("id")
-      user_ref.document(id).set(body)
-      return body
-    except Exception as e: 
-       return f"Internal server error: {e}"
-    
+    id = body["id"]
+    collection_ref.document(id).set(body)
+    return body
+
+
+def get_user_by_id(id):
+    document_ref = collection_ref.document(id)
+    document_snapshot = document_ref.get()
+    if document_snapshot.exists:
+        return document_snapshot.to_dict()
+    else:
+        return None
